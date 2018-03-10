@@ -1,9 +1,9 @@
 ﻿public partial class UnityManagers: IGameManagers {
 
-    readonly Contexts _contexts;
+    public Contexts Contexts { get; private set; }
 
     public UnityManagers(Contexts contexts) {
-        _contexts = contexts;
+        Contexts = contexts;
         Logger = new UnityLogger(this);
         Test = new TestManager(this);
     }
